@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -19,7 +19,7 @@
         <h1>Team Sustainability Summit</h1>
         <div class="hero-divider"></div>
         <p>
-          <i class="fas fa-leaf"></i> Check-in system for sustainability event
+          <i class="fas fa-leaf"> </i> Check-in system for sustainability event
           attendees
         </p>
       </div>
@@ -37,6 +37,11 @@
     <div class="container">
       <!-- Feedback message -->
       <p id="greeting"></p>
+      <p
+        id="celebrationMessage"
+        class="celebration-message"
+        aria-live="polite"
+      ></p>
 
       <!-- Check-in form -->
       <form class="check-in" id="checkInForm">
@@ -80,6 +85,15 @@
             <span class="team-count" id="powerCount">0</span>
           </div>
         </div>
+      </div>
+
+      <!-- Attendee list -->
+      <div class="attendee-list-section">
+        <h3>Latest Check-Ins</h3>
+        <p id="noAttendeesMsg" class="empty-state">
+          No attendees have checked in yet.
+        </p>
+        <ul id="attendeeList" class="attendee-list" aria-live="polite"></ul>
       </div>
     </div>
 
